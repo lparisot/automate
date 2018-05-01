@@ -3,11 +3,17 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { AutomateComponent } from './automate/automate.component';
+import { NetworkGraphComponent } from './network-graph/network-graph.component';
+import { NetworkTableComponent } from './network-table/network-table.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AutomateComponent,
+    NetworkGraphComponent,
+    NetworkTableComponent
   ],
   imports: [
     BrowserModule

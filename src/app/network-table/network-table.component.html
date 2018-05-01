@@ -1,0 +1,14 @@
+<table class="table table-sm table-bordered table-hover" (refresh)="refresh()">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col"></th>
+      <th scope="col" *ngFor="let title of getColumnTitles()">{{title}}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let title of getRowTitles()">
+      <th scope="row">{{title}}</th>
+      <td *ngFor="let d of getData(title)">{{d}}</td>
+    </tr>
+  </tbody>
+</table>

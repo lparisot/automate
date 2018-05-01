@@ -1,0 +1,21 @@
+<div>
+  <div class="row">
+    <div class="col">
+      <app-network-graph [data]="data"></app-network-graph>
+      <app-network-table [data]="letters"></app-network-table>
+    </div>
+    <div class="col-6">
+      <div class="col-5">
+        <label>Enter a new word</label>
+        <input type="text" class="form-control" #box (keyup.enter)="onEnter(box.value); box.value=''">
+      </div>
+      <div class="col">
+        <ul class="words">
+          <li *ngFor="let word of words" (click)="onSelect(word)" [class]="word.selected ? 'bg-success' : 'bg-light'">
+            {{word.value}}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
